@@ -1,0 +1,47 @@
+name: Ban tin sang 7h
+
+on:
+  schedule:
+    # 23:52 UTC = 06:52 gio Viet Nam ngay HOM SAU (UTC+7).
+    # Dat lech khoi dau gio co y: GitHub hay tre - va co the bo job -
+    # vao dau moi gio, dac biet moc 00:00 UTC. Chay 6h52 thi tin
+    # thuong toi vao khoang 7h sang.
+    - cron: '52 23 * * *'
+  workflow_dispatch: {}   # cho phep bam chay thu bang tay
+
+permissions:
+  contents: write         # can de commit lai state.json
+
+concurrency:
+  group: daily-brief
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Node 22 chay truc tiep file .ts, nen khong can npm install, khong can build
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Gui ban tin
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: node src/index.ts
+
+      - name: Luu lai state
+        run: |
+          if [[ -n "$(git status --porcelain state.json)" ]]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add state.json
+            git commit -m "chore: cap nhat state $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "state.json khong doi, bo qua commit."
+          fi

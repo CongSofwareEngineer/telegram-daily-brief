@@ -1,0 +1,13 @@
+{
+  "sentHackIds": [
+    "llama:Binance CEX:1793232000",
+    "llama:Mercado Bitcoin:1793577600",
+    "llama:Polymarket International:1793232000",
+    "llama:Troves:1793404800",
+    "llama:Premia V3:1793491200",
+    "llama:BTCPay Server:1793491200",
+    "llama:b14g:1793404800"
+  ],
+  "lastCpiPeriod": "2026-09-01",
+  "sentFedLinks": []
+}

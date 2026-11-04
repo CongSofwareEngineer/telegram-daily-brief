@@ -1,0 +1,27 @@
+{
+  "name": "telegram-daily-brief",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Bot Telegram gửi bản tin 7h sáng (giờ Việt Nam) mỗi ngày: giá crypto, vàng & dầu, vụ hack mới nhất, lạm phát & Fed, kinh tế Mỹ",
+  "engines": {
+    "node": ">=22.9"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/index.ts",
+    "dry": "DRY_RUN=1 node --env-file-if-exists=.env src/index.ts",
+    "test:render": "node src/test-render.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/node": "^22.10.0",
+    "eslint": "^10.14.0",
+    "globals": "^17.14.0",
+    "typescript": "^5.8.0",
+    "typescript-eslint": "^8.72.1"
+  }
+}
