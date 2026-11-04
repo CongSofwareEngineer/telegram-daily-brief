@@ -5,7 +5,8 @@ import { getLlamaHacks, getRektPosts, renderHacks } from './hacks.ts'
 import { getCpi, getFedRate, getFedNews, renderMacro } from './macro.ts'
 import { getFomc } from './fomc.ts'
 import { getOil, renderCommodities } from './commodities.ts'
-import { getEconomy, renderEconomy } from './economy.ts'
+// Tam tat muc "TINH HINH KINH TE MY". Muon bat lai: bo comment 4 cho co "economy" trong file nay.
+// import { getEconomy, renderEconomy } from './economy.ts'
 import { loadState, saveState } from './state.ts'
 import { sendTelegram } from './telegram.ts'
 import { todayVN, errMsg, code } from './util.ts'
@@ -16,7 +17,7 @@ async function main(): Promise<void> {
 
   // Goi song song cho nhanh. Moi nguon tu xu ly loi cua no nen mot API chet
   // thi cac phan con lai van gui duoc.
-  const [prices, oil, llama, rekt, cpi, fedRate, fedNews, fomc, economy] = await Promise.all([
+  const [prices, oil, llama, rekt, cpi, fedRate, fedNews, fomc/* , economy */] = await Promise.all([
     getPrices().catch((err: unknown): CoinRow[] => {
       console.error('[prices]', errMsg(err))
       return []
@@ -28,7 +29,7 @@ async function main(): Promise<void> {
     getFedRate(),
     getFedNews(state.sentFedLinks),
     getFomc(),
-    getEconomy(),
+    // getEconomy(),
   ])
 
   const cpiIsNew = cpi !== null && cpi.period !== state.lastCpiPeriod
@@ -39,7 +40,7 @@ async function main(): Promise<void> {
     renderCommodities(prices, oil),
     renderHacks(llama, rekt),
     renderMacro({ cpi, fedRate, fedNews, fomc, cpiIsNew }),
-    renderEconomy(economy),
+    // renderEconomy(economy),
   ].join('\n\n')
 
   await sendTelegram(message)
