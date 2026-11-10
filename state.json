@@ -10,10 +10,13 @@
     "llama:BitMart:1793577600",
     "llama:TENDRIL:1793836800",
     "llama:Loopscale Lending:1793836800",
-    "llama:Keplr Wallet (Web3Auth):1793923200"
+    "llama:Keplr Wallet (Web3Auth):1793923200",
+    "llama:ACryptoS:1794096000",
+    "llama:Ankr Bridge:1794182400"
   ],
   "lastCpiPeriod": "2026-09-01",
   "sentFedLinks": [
-    "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261105a.htm"
+    "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261105a.htm",
+    "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm"
   ]
 }
