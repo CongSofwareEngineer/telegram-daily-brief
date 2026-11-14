@@ -18,7 +18,8 @@
     "llama:Across:1794268800",
     "llama:Rujira AMM Strategies:1794355200",
     "llama:LNbits:1794096000",
-    "llama:Edel:1794441600"
+    "llama:Edel:1794441600",
+    "llama:Pennysia:1794528000"
   ],
   "lastCpiPeriod": "2026-09-01",
   "sentFedLinks": [
@@ -26,6 +27,7 @@
     "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm",
     "https://www.federalreserve.gov/newsevents/pressreleases/other20261112a.htm",
     "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
-    "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261112a.htm"
+    "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261112a.htm",
+    "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm"
   ]
 }
