@@ -27,7 +27,12 @@
     "llama:Chain Games:1794700800",
     "llama:Luxor Commander:1794700800",
     "llama:Optimizely (OPTIMJACK):1794787200",
-    "llama:B18 TimeBank:1794873600"
+    "llama:B18 TimeBank:1794873600",
+    "llama:K3 Capital:1794960000",
+    "llama:Gonka AI:1794960000",
+    "llama:RNT Lend:1794960000",
+    "llama:LUKSO:1794960000",
+    "llama:Peapods Finance:1794960000"
   ],
   "lastCpiPeriod": "2026-09-01",
   "sentFedLinks": [
@@ -36,6 +41,7 @@
     "https://www.federalreserve.gov/newsevents/pressreleases/other20261112a.htm",
     "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
     "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261112a.htm",
-    "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm"
+    "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm"
   ]
 }
