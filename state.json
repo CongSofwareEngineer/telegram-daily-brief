@@ -32,7 +32,9 @@
     "llama:Gonka AI:1794960000",
     "llama:RNT Lend:1794960000",
     "llama:LUKSO:1794960000",
-    "llama:Peapods Finance:1794960000"
+    "llama:Peapods Finance:1794960000",
+    "llama:CALC:1795046400",
+    "llama:Fluidkey:1795046400"
   ],
   "lastCpiPeriod": "2026-09-01",
   "sentFedLinks": [
