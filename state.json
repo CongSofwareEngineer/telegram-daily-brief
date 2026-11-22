@@ -35,7 +35,9 @@
     "llama:Peapods Finance:1794960000",
     "llama:CALC:1795046400",
     "llama:Fluidkey:1795046400",
-    "llama:Wagyu (XMR1):1795132800"
+    "llama:Wagyu (XMR1):1795132800",
+    "llama:Chainflip AMM:1795219200",
+    "llama:CyberConnect:1795219200"
   ],
   "lastCpiPeriod": "2026-09-01",
   "sentFedLinks": [
